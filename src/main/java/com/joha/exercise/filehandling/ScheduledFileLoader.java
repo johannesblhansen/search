@@ -32,14 +32,4 @@ public class ScheduledFileLoader {
         return Files.newBufferedReader(newestPath);
     }
 
-    public BufferedReader getBufferedReaderFromBenchmarkFile() throws IOException {
-        Path path = Paths.get("inboundJsonData/testFile5m.json");
-        return Files.newBufferedReader(path);
-    }
-
-    public BufferedReader getBufferedReaderLatestJsonDataFileByName(String fileName) throws IOException {
-        Path path = Paths.get("inboundJsonData/" + fileName);
-        return Files.newBufferedReader(path);
-    }
-
 }
