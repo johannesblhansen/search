@@ -2,11 +2,16 @@
 Java 16
 Maven 3+
 
+## The Task
+Given an API specification, openapi.json, build a REST api that can search through input data, in the form of the example
+file, data.json.
+Elaborate on the effects of increasing the input size.
+
 ## Running the application
 To run the application, it must be build using maven.
 
 To run the spring boot application, execute following command
-java -jar target\exercise-0.0.1-SNAPSHOT.jar com.joha.exercise.ExerciseApplication
+java -jar target\exercise-0.0.1-SNAPSHOT.jar ExerciseApplication
 
 Swagger UI can be found here:
 http://localhost:8080/api/swagger-ui/#/search-controller/search
@@ -70,14 +75,4 @@ Async split: 5x 1m
 
 Not that much was saved here, but it was run on my old i3m processor laptop with only 2 cores.
 
-In theory, in a cloud based solution, if cost is not an issue, amount of cores for thread processing would unlimited.
-Therefore, if each chunk of file can be handled within the limit, with a buffer for overhead such as collecting results from 
-each thread, then it would possible to handle a very high number of records. 
-
 Tracking threads through VisualVM on my ubunto machine
-
-# Preload data files into database.
-
-Starting the local mysql sudo systemctl start mysql
-
-jdbc:mysql://localhost:3306/ticketdb

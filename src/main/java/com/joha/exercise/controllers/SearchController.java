@@ -43,13 +43,8 @@ public class SearchController implements SearchApi {
         return ticketSearchService.searchForTicketsByStreaming(attribute, value).toString();
     }
 
-    @GetMapping("searchUsingStreamForBenchmark")
-    public String searchUsingStreamForBenchmark(String attribute, String value) throws IOException {
-        return ticketSearchService.searchForTicketsByStreamingBenchMarking(attribute, value).toString();
-    }
-
-    @GetMapping("searchUsingStreamAsync")
-    public String searchUsingStreamAsync(String attribute, String value) throws IOException, ExecutionException, InterruptedException {
-        return ticketSearchService.searchForTicketsByStreamingAsync(attribute, value).toString();
-    }
+    //@GetMapping("searchUsingStreamAsync")
+    //public String searchUsingStreamAsync(String attribute, String value) throws IOException, ExecutionException, InterruptedException {
+    //    return ticketSearchService.searchForTicketsByStreamingAsync(attribute, value).toString();
+    //}
 }
